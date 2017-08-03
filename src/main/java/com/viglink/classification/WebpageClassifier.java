@@ -63,6 +63,7 @@ public class WebpageClassifier {
 
     public Classifier loadModel(File serializedModel) throws IOException, ClassNotFoundException {
 
+        //import the model (the serialized model files should be in the resources folder)
         ObjectInputStream ois =
                 new ObjectInputStream(new FileInputStream(serializedModel));
         Classifier clf = (Classifier) ois.readObject();
